@@ -143,5 +143,5 @@ resource "aws_lb_listener" "listener" {
   }
 }
   output "alb_dns_name" {
-  value = aws_alb.myalb.dns_name
+  value = aws_lb.myalb.dns_name
 }
