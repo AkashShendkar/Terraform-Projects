@@ -141,6 +141,7 @@ resource "aws_lb_listener" "listener" {
     target_group_arn = aws_lb_target_group.tg.arn
     type             = "forward"
   }
+}
   output "alb_dns_name" {
   value = aws_alb.myalb.dns_name
 }
