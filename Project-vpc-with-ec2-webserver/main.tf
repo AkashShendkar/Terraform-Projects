@@ -78,7 +78,7 @@ resource "aws_instance" "webserver1" {
   vpc_security_group_ids = [aws_security_group.Web-SG.id]
   subnet_id              = aws_subnet.sub1.id
   user_data              = base64encode(file("ud1.sh"))
-  tag                    = {
+  tags                   = {
     Name = "Server1"
   }
 }
@@ -89,7 +89,7 @@ resource "aws_instance" "webserver2" {
   vpc_security_group_ids = [aws_security_group.Web-SG.id]
   subnet_id              = aws_subnet.sub2.id
   user_data              = base64encode(file("ud2.sh"))
-  tag                    = {
+  tags                   = {
     Name = "Server2"
   }
 }
