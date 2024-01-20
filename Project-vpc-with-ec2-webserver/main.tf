@@ -73,7 +73,7 @@ resource "aws_security_group" "Web-SG" {
 
 
 resource "aws_instance" "webserver1" {
-  ami                    = "ami-0261755bbcb8c4a84"
+  ami                    = "ami-03f4878755434977f"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.Web-SG.id]
   subnet_id              = aws_subnet.sub1.id
@@ -84,7 +84,7 @@ resource "aws_instance" "webserver1" {
 }
 
 resource "aws_instance" "webserver2" {
-  ami                    = "ami-0261755bbcb8c4a84"
+  ami                    = "ami-03f4878755434977f"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.Web-SG.id]
   subnet_id              = aws_subnet.sub2.id
