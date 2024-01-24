@@ -21,3 +21,8 @@ Now, Install Vault
 ```
 sudo yum install vault
 ```
+
+Start Vault
+``
+vault server -dev -dev-listen-address="0.0.0.0:8200"
+``
