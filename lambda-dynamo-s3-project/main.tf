@@ -20,8 +20,7 @@ resource "aws_dynamodb_table" "my_table" {
 
 # Create an S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "bucketforlambda-akash124816" 
-  acl    = "private"
+  bucket = "bucketforlambda-akash12481632" 
 }
 
 # Create an IAM role for Lambda function
@@ -59,9 +58,26 @@ resource "aws_lambda_function" "my_lambda" {
   filename      = "lambda_function.zip"
   source_code_hash = filebase64("lambda_function.zip")
   role          = aws_iam_role.my_lambda_role.arn
-  environment = {
-    TABLE_NAME = aws_dynamodb_table.my_table.name
-  }
+ 
   depends_on = [aws_iam_role_policy_attachment.lambda_dynamodb, aws_iam_role_policy_attachment.lambda_s3]
 }
 
+
+
+# Create an S3 event notification for Lambda
+resource "aws_lambda_permission" "allow_s3" {
+  statement_id  = "AllowExecutionFromS3Bucket"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.my_lambda.function_name
+  principal     = "s3.amazonaws.com"
+}
+
+resource "aws_s3_bucket_notification" "lambda_trigger" {
+  bucket = aws_s3_bucket.my_bucket.bucket
+  lambda_function {
+    lambda_function_arn = aws_lambda_function.my_lambda.arn
+    events              = ["s3:ObjectCreated:*"]
+    
+  }
+  
+} 
