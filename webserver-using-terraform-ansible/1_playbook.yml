@@ -1,0 +1,24 @@
+---
+- name: Install and Start nginx
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Install nginx
+    apt:
+       name: nginx
+       state: present
+       
+  - name: Start nginx
+    service:
+      name: nginx
+      state: started
+
+  - name: Copy file from local to remote
+    copy:
+        src: /source/   
+        dest: /destination
+        mode: 0755
+  
+  - name: Run Bash Script
+    script: /script-location.sh
