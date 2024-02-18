@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat <<EOF > /var/www/html/index.html
+cat <<EOF > /usr/share/nginx/html/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +76,7 @@ cat <<EOF > /var/www/html/index.html
 EOF
 
 
-cat <<EOF > /var/www/html/styles.css
+cat <<EOF > /usr/share/nginx/html/styles.css
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
