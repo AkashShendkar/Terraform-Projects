@@ -21,4 +21,4 @@
         mode: 0755
   
   - name: Run Bash Script
-    script: /script-location.sh
+    command: ./script-location.sh
