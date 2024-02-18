@@ -13,6 +13,7 @@
     service:
       name: nginx
       state: started
+      enabled: yes
 
   - name: Copy file from local to remote
     copy:
