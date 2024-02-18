@@ -1,2 +1,4 @@
 #!/bin/bash
 cat <<EOF > /home/ec2-user/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDv6bHCpvHP+iIEfnES1in3rrDqXP0q9OGFasMX6y2+09u9m3A+/7XcTMd3L0rdm97Mkv/EC75PJ+dprAHLTI3IQEV6AeS4/dAaMBlVSewoOBRVu4gA/BNyLhNLQbPEeqQ92kDnYJsDDiIYjzlbf/CoteCwWan61YT4TPCaKpVc1i+wtEW/9/9zY0LUufNEeYlhG8VOxnvmUiWhhCcHSC0T1/YoH11mpXtQ5oqlpnPRR9LHtdHRqYji9hHyvTbIHKQB/b9fcnLBerEqIQO7ISEFW/PGNjCD1zIqWXwvTx6rNDr/LVe+EPMM4kG4DAZUK+ZDjUpS1ZrdaPQOf2Tu3gXzXZfSI+y0KLYXy8utOf4Cx1SX+DBimPPCME5kyqmfShXSGLXdf4kZG38/ONAxPpujEDza8KF6KxxlxQcMoC6wgXWvtcjXXQzhIK6KVMfx2F9wKR80/HkwHHedyNdthIvsD8ZQ1/z75mFOUlyddTJQOjDahJPGpmsyFNM6bbwejvk= ec2-user@ip-172-31-36-94.ap-south-1.compute.internal
+EOF
