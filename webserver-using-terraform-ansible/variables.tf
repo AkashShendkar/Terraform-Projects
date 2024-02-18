@@ -7,3 +7,6 @@ variable "instance_type_value" {
 variable "key_name" {
   
 }
+variable "security_groups"{
+
+}
