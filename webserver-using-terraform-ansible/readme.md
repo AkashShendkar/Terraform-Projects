@@ -10,9 +10,8 @@
 
 6.Run ansible-host.sh script for passwordless login to instnaces
 
-7. copy ansbile.cfg file to /etc/ansible
+7.copy ansbile.cfg file to /etc/ansible
 
-8. 
+8.Give correct path in script to avoid errors 
 
-9. 
-Run ansible playbook with inventory
+9.Run ansible playbook with inventory
