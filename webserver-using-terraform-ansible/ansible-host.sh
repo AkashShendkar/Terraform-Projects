@@ -1,3 +1,53 @@
 #!/bin/bash
 
-cat << EOF >> id_rsa
+# Check if the SSH key pair already exists
+if [ ! -f ~/.ssh/id_rsa ]; then
+    echo "Generating SSH key pair..."
+    ssh-keygen -t rsa -b 4096 -C "SSH-KEYGEN" -f ~/.ssh/id_rsa -N ""
+    echo "SSH key pair generated successfully."
+else
+    echo "SSH key pair already exists."
+fi
+
+# Import private key to id_rsa
+cat << EOF >> /home/ec2-user/.ssh/id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+cHV0ZS5pbnRlcm5hbAECAwQFBgc=
+-----END OPENSSH PRIVATE KEY-----
+EOF
