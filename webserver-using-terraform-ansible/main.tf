@@ -11,5 +11,4 @@ resource "aws_instance" "server1" {
   tags = {
     Name = "server1"
   }
-  user_data = base64encode(file("userdata.sh"))
 }
