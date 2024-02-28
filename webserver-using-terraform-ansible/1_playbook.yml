@@ -17,9 +17,9 @@
 
   - name: Copy file from local to remote
     copy:
-        src: /source/   
-        dest: /destination
+        src: /home/ec2-user/repo/webserver-using-terraform-ansible/script.sh
+        dest: /home/ec2-user/script.sh
         mode: 0755
-  
+
   - name: Run Bash Script
-    command: ./script-location.sh
+    command: ./home/ec2-user/script.sh
