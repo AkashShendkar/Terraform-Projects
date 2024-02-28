@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#################
+# Author - Akash
+# Version - 2
+#################
+
+set -x
+yum install -y ansible
+yum install -y yum-utils shadow-utils
+yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+yum -y install terraform
+yum -y install pip
+pip install boto3
 # Import private key to id_rsa
 cat << EOF > /home/ec2-user/.ssh/id_rsa
 -----BEGIN RSA PRIVATE KEY-----
