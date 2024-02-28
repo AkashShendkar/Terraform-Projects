@@ -22,4 +22,4 @@
         mode: 0755
 
   - name: Run Bash Script
-    command: ./home/ec2-user/script.sh
+    command: bash /home/ec2-user/script.sh
