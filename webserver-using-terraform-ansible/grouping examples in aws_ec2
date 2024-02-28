@@ -1,0 +1,30 @@
+Example1
+
+plugin: aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: tags['environment']
+    prefix: tag_environment_
+
+
+Example2
+
+plugin: aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: instance_type
+    prefix: type_
+
+
+Example3
+
+plugin: aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: tags['environment']
+    prefix: tag_environment_
+  - key: tags['application']
+    prefix: tag_application_
